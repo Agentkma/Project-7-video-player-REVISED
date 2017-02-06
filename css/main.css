@@ -158,6 +158,15 @@ vertical-align: middle;}
 }
 
 
+
+/***********
+************MEDIA QUERIES /
+						RESPONSIVE DESIGN
+                  **************
+                  *************/
+
+
+
 @media screen and (max-width:768px)
 {
 	body{
