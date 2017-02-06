@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 7 Video Player</title>
+    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body>
+
+
+    <div id="video-container">
+        <!-- Video -->
+        <video id="video" preload="metadata">
+          <source src="video/video.mp4" type="video/mp4" >
+          <source src="video/video.ogg" type="video/ogg" >
+          <track  default id="track" src="video/captions.vtt" kind="captions" srclang="en" label="English">
+        </video>
+
+<!-- Progress Bar -->
+        <progress id="seek-bar" value="0" max="100"> </progress><br>
+
+<!-- Video Controls -->
+    <div id="video-controls">
+
+
+        <button type="button" id="play-pause" ><img src="icons/play-icon.png" alt="play-icon"></button>
+        <span id="time-display">
+            <span id="current-time">00:00</span>
+            / <span id="total-time">59:59</span>
+        </span>
+        <button type="button" id="mute"><img src="icons/volume-off-icon.png" alt="volume-off-icon"></button>
+        <button type="button" id="captions">CC </button>
+        <button type="button" id="full-screen"><img src="icons/fullscreen-icon.png" alt="full-screen-icon"></button>
+        <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+    </div>
+
+  </div>
+
+  <div class="transcript-wrapper" id="transcript">
+<!-- CAPTIONS/TRANSCRIPT/TEXT  -->
+
+  </div>
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+
+  </body>
+</html>

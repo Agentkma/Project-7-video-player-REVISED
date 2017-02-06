@@ -1,0 +1,183 @@
+/***********
+************ELEMENTS
+                  **************
+                  *************/
+*, *::after, *:before {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body{
+font-size: 1.25em;
+line-height: 1.25em;
+}
+
+
+button {
+  display: inline;
+	background: rgba(0,0,0,0);
+	border: 0;
+	color: #EEE;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button img {
+  vertical-align: middle;
+}
+
+progress[value]{
+  background-color: white;
+  border: none;
+  cursor:pointer;
+
+  /* clear the default appearance */
+-webkit-appearance: none;
+  -moz-appearance: none;
+
+
+/* delete border in Firefox. */
+border: none;
+}
+
+video {
+	max-width: 100%;
+}
+
+
+
+/***********
+************CLASSES
+                  **************
+                  *************/
+
+.transcript-wrapper{
+  margin: 5% 5%;
+  line-height: 1.5em;
+  }
+
+
+/*Transcipt Text when video playing */
+.highlight {
+ color: white;
+ background-color: gray;
+}
+
+/***********
+************ID S
+                  **************
+                  *************/
+
+#video-container {
+	position: relative;
+  }
+
+#video-controls {
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	right: 0;
+	padding: 5px;
+	opacity: 0;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	transition: opacity .3s;
+  background-color: gray;
+	color: white;
+   }
+
+
+
+
+#video-container:hover #video-controls {
+	opacity: .9;
+  }
+
+/* this is intended to make seek bar visible even when not hovering...not working */
+#video-container #seek-bar {
+  opacity:.9;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  -ms-transition: opacity .3s;
+  transition: opacity .3s;
+  max-width: 100%;
+  height:.5em;
+  position: absolute;
+	display:block;
+	width:100%;
+	bottom: 0px;
+  }
+
+#volume-bar {
+  	width: 100px;
+    cursor: pointer;
+  }
+
+#current-time,
+#total-time {
+  color: white;
+}
+
+
+#play-pause,
+#current-time,
+#total-time,
+#seek-bar,
+{float: left;
+vertical-align: middle;}
+
+#mute,
+#volume-bar,
+#captions,
+#full-screen {
+  vertical-align: middle;
+  float: right;
+}
+
+#seek-bar::-moz-progress-bar
+  {
+	background-color: darkgray;
+  }
+
+#seek-bar::-webkit-progress-value {
+	background-color: darkgray;
+  }
+
+#transcript {
+  cursor:pointer;
+}
+
+
+@media screen and (max-width:768px)
+{
+	body{
+		font-size: 1.5em;
+		line-height: 1.5em;
+
+		}
+ button,
+ input {
+	 border: 1px solid white;
+ }
+
+#video-container #seek-bar{
+		height: 1em;
+	}
+#video-controls {
+	bottom: -51px;
+}
+
+.transcript-wrapper{
+	margin-top: 3em;
+}
+}
