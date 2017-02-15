@@ -66,8 +66,9 @@ video {
 
 /*Transcipt Text when video playing */
 .highlight {
- color: white;
+ /*  nothing*/
  background-color: gray;
+ color: white;
 }
 
 /***********
