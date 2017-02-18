@@ -126,13 +126,13 @@ create_transcript();
 	muteButton.addEventListener("click", function() {
 		if (video.muted === false) {
 			// Mute the video
-			video.muted === true;
+			video.muted = true;
 
 			// Update the button text
 			muteButton.innerHTML = unmute_clicked;
 		} else {
 			// Unmute the video
-			video.muted === false;
+			video.muted = false;
 
 			// Update the button text
 			muteButton.innerHTML = mute_clicked;
