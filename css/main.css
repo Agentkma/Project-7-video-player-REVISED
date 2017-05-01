@@ -132,7 +132,7 @@ video {
 #play-pause,
 #current-time,
 #total-time,
-#seek-bar,
+#seek-bar
 {float: left;
 vertical-align: middle;}
 
