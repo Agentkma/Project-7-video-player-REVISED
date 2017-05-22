@@ -1,3 +1,8 @@
+$(document).ready(function () {
+	$('h1').hide().slideDown(1000);
+
+});
+
 var supports_video = !!document.createElement('video').canPlayType;
 if (supports_video) {
 
@@ -5,20 +10,20 @@ if (supports_video) {
 window.onload = function() {
 
 	// Video
-	var video = document.getElementById("video");
-  var track = document.getElementById("track");
-  var total_time = document.getElementById('total-time');
-  var current_Time=document.getElementById('current-time');
+	var video 							= document.getElementById("video");
+  var track 							= document.getElementById("track");
+  var total_time 					= document.getElementById('total-time');
+  var current_Time				=	document.getElementById('current-time');
 
 	// Buttons
-	var playButton = document.getElementById("play-pause");
-	var muteButton = document.getElementById("mute");
-	var fullScreenButton = document.getElementById("full-screen");
+	var playButton 					= document.getElementById("play-pause");
+	var muteButton 					= document.getElementById("mute");
+	var fullScreenButton 		= document.getElementById("full-screen");
   var closedCaptionButton = document.getElementById("captions");
 
 	// Sliders
-	var seekBar = document.getElementById("seek-bar");
-	var volumeBar = document.getElementById("volume-bar");
+	var seekBar 						= document.getElementById("seek-bar");
+	var volumeBar 					= document.getElementById("volume-bar");
 
   // General Variables
   var timeRounder = {};
@@ -64,6 +69,7 @@ timeRounder.round = function(number, precision) {
     var tempNumber = number * factor;
     var roundedTempNumber = Math.round(tempNumber);
     return roundedTempNumber / factor;
+
 };
 
 
@@ -178,6 +184,8 @@ create_transcript();
 
 		// update current-time value;
 		current_Time.innerHTML = timeRounder.round(video.currentTime,2);
+
+
 
 		// highlight the appropriate transcript span
 		for (var i = 0; i < transcript_array.length; i++)

@@ -6,11 +6,20 @@
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+
+
 }
 
 body{
 font-size: 1.25em;
 line-height: 1.25em;
+background-image:  linear-gradient(0deg, #fff, #c2c2c2);
+}
+
+h1 {
+	text-align: center;
+	text-shadow: 3px 3px 5px gray;
+	line-height: 1.25em;
 }
 
 
@@ -52,6 +61,13 @@ video {
 }
 
 
+footer {
+	text-align: center;
+	font-size: .75em;
+	text-shadow: 3px 3px 5px gray;
+}
+
+
 
 /***********
 ************CLASSES
@@ -59,7 +75,7 @@ video {
                   *************/
 
 .transcript-wrapper{
-  margin: 5% 5%;
+  margin: 5% 0%;
   line-height: 1.5em;
   }
 
@@ -74,6 +90,12 @@ video {
 ************ID S
                   **************
                   *************/
+
+
+#page-container {
+	width: 60%;
+	margin: 0 auto;
+}
 
 #video-container {
 	position: relative;
@@ -128,6 +150,10 @@ video {
   color: white;
 }
 
+#time-slash {
+	display: inline-grid;
+}
+
 
 #play-pause,
 #current-time,
@@ -177,6 +203,10 @@ vertical-align: middle;}
  button,
  input {
 	 border: 1px solid white;
+ }
+
+ #page-container {
+ 	width: 75%;
  }
 
 #video-container #seek-bar{
